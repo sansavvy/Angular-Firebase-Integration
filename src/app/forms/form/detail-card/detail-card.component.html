@@ -1,0 +1,32 @@
+
+<div class="card bg-dark text-white">
+  <img src="assets/Images/business-office-flatlay-contact-us.jpg" class="card-img" alt="...">
+  <div class="card-img-overlay">
+    <h5 class="card-title color-title">Building a community !</h5>
+    <p class="card-text color">"Alone, we can do so little; together, we can do so much”</p>
+    <p class="card-text color"> – Helen Keller.</p>
+    <button type="button" class="btn btn-dark" (click)="gotoHome()">Home</button>
+  </div>
+  
+</div>
+<div class="parent-class">
+  <div class="alert alert-success" role="alert" *ngIf="responseSent">
+    Thanks for your Response!
+   </div>
+  <h1>Contact</h1>
+  <p> Stay touch with us. we'll be happy to help you.</p>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Your Email</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" [(ngModel)]="userMail">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Comments</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="userdesc"></textarea>
+  </div>
+  <button type="button" class="btn btn-primary btn-sm" (click)="onSend()">Send</button>
+  
+</div>
+
+ 
+   
+  

@@ -1,0 +1,159 @@
+<nav role='navigation'>
+  <div id="menuToggle">
+    <input type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <a (click)="gotoHome()" class="cursor">
+        <li>Home</li>
+      </a>
+      <a (click)="gotoStay()" class="cursor">
+        <li>Explore Stay</li>
+      </a>
+      <a (click)="gotoplaces()" class="cursor">
+        <li>Travel Records</li>
+      </a>
+      <a (click)="gotoContact()" class="cursor">
+        <li>Contact</li>
+      </a>
+    </ul>
+  </div>
+</nav>
+<ng-container  >
+ <h1 style="padding: 4rem;
+ margin-left: 34rem;">Explore Places</h1>
+  <div class="container-sm top">
+    
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/Images/20200304141221_IMG_8739.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Echo Point, Munnar</h5>
+          <p>Where the soul finds it's peace</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/Images/20200305170917_IMG_2773.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Alleppey, Kerala</h5>
+          <p>The Venice of the East.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/Images/20200305182704_IMG_2857.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Cherai Beach, Kerala</h5>
+          <p>Sandy toes, sun-kissed nose!</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div class="accordion margin-top" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <strong>Echo Point Munnar</strong>
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <h4>Hello Everyone....</h4>
+          <br>
+<p>How would you feel if someone up there responded to all your voices in the same manner you speak?</p>
+<strong>It appears to be intriguing.Isn't that right?</strong>
+<p>Let's see what's in this spot that makes us feel really excited...</p>
+<br>
+<p>
+  This is Munnar's Echo Point. The sounds carried through the reservoir here reverberate back into the surroundings, shattering the peaceful stillness of the hill station. 
+  This natural echo phenomenon earns this location the name "Echo Station," and it is one of Munnar's most popular attractions. 
+  This tranquil location allows visitors to hear their own voice returning to them again and again.
+</p>
+<br>
+<img src="assets/Images/IMG_20200304_111824.jpg" class="img-thumbnail" alt="..."><br>
+             <img src="assets/Images/IMG_20200304_171951.jpg" class="img-thumbnail" alt="...">
+<h4>HighLights</h4>
+<p>If you are a audacious person who enjoys new challenges and adventures, 
+  Echo Point is the go to destination. This place do offers other activities like trekking, nature walk, boating, etc.
+   It is also a great place for <strong>nature lovers, photographers, and wildlife enthusiast</strong>, who takes pleasure in viewing the picturesque valleys
+    of Munnar and capture the images of green hills, clad in tea plantations and spice gardens.<strong>Neelakurinji flowers</strong>, which bloom only once in 12 years, also add a feather 
+    to the beauty of this point.</p>
+    <img src="assets/Images/IMG_20200304_093954.jpg" class="img-thumbnail" alt="..."><br>
+             <img src="assets/Images/IMG_20200304_172806.jpg" class="img-thumbnail" alt="...">
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <strong>Alleppey,Kerala</strong>
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>"Backwaters, Beaches and Lagoons - Venice of the East"</strong>
+          <br>
+          <p>Yeah...You heared me right !</p>
+          <br>
+          <p>Officially called Alappuzha, Alleppey is known for its network of canals and lagoons with beautiful backwaters and the houseboats offering overnight stays. 
+            Located in the southern part of Kerala, the coastline of Alleppey offers some of the best beaches with water sports during the dry season. 
+            Coupled with other beautiful places in Kerala like Munnar and Thekkady, Alleppey is often considered for a honeymoon or for a great family vacation.</p>
+            <br>
+          <p>Alappuzha (Alleppey) is referred to as <strong>"the Venice of the East."</strong> This picturesque site is the centre of Kerala's backwaters and 
+          is home to a vast network of backwaters and thousands of houseboats, making it one of the greatest tourist destinations in Alleppey.</p>
+          <img src="assets/Images/IMG_20200305_140622.jpg" class="img-thumbnail" alt="..."><br>
+          
+             <img src="assets/Images/IMG_20200305_140607.jpg" class="img-thumbnail" alt="..."><br>
+          <p>The houseboats seen in Alappuzha's backwaters are a modernized version of the traditional Kettuvallams.
+          Kettuvallam is a Malayalam word in which <strong>'Kettu'</strong> refers to living buildings and <strong>'Vallom'</strong> refers to boats.
+          In the past, kettuvallams, or boats with thatched roofs that cover wooden hulls, were used to transport quantities of rice and spices.</p>
+          <br>
+          <p>There are plenty of houseboats, homestays, and rejuvenating Ayurvedic resorts that make staying in Alleppey brilliant.
+             The houseboats pass through the serene backwaters, where you can catch glimpses of green paddy fields, choir-making activities, and witness the life of locals in Kerala.</p>
+             <img src="assets/Images/IMG_20200305_151258_1.jpg" class="img-thumbnail" alt="..."><br>
+             <img src="assets/Images/IMG_20200305_140933.jpg" class="img-thumbnail" alt="...">
+             
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <strong>Cherai Beach, Kerala.</strong>
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <p>Cherai beach, located near the northern end of Vypeen Island, is one of Kerala's most popular beaches.
+             It is also linked to Kochi via waterways. 
+            This 10-kilometer-long beach, dotted with rocks and walled in by coconut trees, is ideal for weekend getaways away from the rush and bustle of city life.</p>
+            <p>Cherai Beach is one of the few spots where you can see both the backwaters and the sea in one shot. 
+              Swimming and other watersports are now possible due to the low tide and mild surf. </p>
+               <p> If you don't want to swim, you may sit back and enjoy the beautiful view of the sunset with wonderful cuisine and drinks. 
+                If you're lucky, you might even see dolphins!</p>
+                <img src="assets/Images/IMG_20200305_205858.jpg" class="img-thumbnail" alt="..."><br>
+             <img src="assets/Images/IMG_20200306_203105.jpg" class="img-thumbnail" alt="...">
+                
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</ng-container>
+
+  

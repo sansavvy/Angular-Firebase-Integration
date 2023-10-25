@@ -1,0 +1,48 @@
+<nav role='navigation'>
+  <div id="menuToggle">
+    <input type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <a (click)="gotoHome()" class="cursor">
+        <li>Home</li>
+      </a>
+      <a (click)="gotoStay()" class="cursor">
+        <li>Explore Stay</li>
+      </a>
+      <a (click)="gotoplaces()" class="cursor">
+        <li>Travel Records</li>
+      </a>
+      <a (click)="gotoContact()" class="cursor">
+        <li>Contact</li>
+      </a>
+    </ul>
+  </div>
+</nav>
+
+  <div class="card text-center">
+    <div class="card-header">
+        Welcome !
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Exploring new horizons, one destination at a time.</h5>
+      <p class="card-text">You will enrich your life immeasurably if you approach it with a sense of wonder and discovery, and always challenge yourself to try new things.</p>
+      <button type="button" (click)="goToPlaces()" class="btn btn-info">Ready to Go</button>
+    </div>
+    <!-- <div class="card-footer text-muted">
+      2 days ago
+    </div> -->
+  </div>
+  <div class="container">
+    <div class="row card-space">
+  <div class="card crd" *ngFor="let item of sampleData">
+    <img [src]="item.imgRef" class="card-img-top" alt="image">
+    <div class="card-body">
+      <h5 class="card-title">{{item?.cardTitle}}</h5>
+      <p class="card-text">{{item?.cardDesc}}</p>
+      <button type="button" (click)="goToDetails(item?.link)" class="btn btn-secondary">Learn More</button>
+    </div>
+  </div>
+    </div>
+  </div>

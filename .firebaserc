@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "forms-a1d88": {
+      "hosting": {
+        "Form-validation": [
+          "forms-a1d88"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "forms-a1d88"
+  }
+}

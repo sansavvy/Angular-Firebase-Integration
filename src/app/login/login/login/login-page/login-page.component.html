@@ -1,0 +1,85 @@
+<ng-container >
+        <div class="container">
+            <div class="form-container" id="login-form" *ngIf="!isSignUp">
+              <h1>Login</h1>
+              <form [formGroup]="loginForm">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your email" formControlName="userName">
+                <span *ngIf="loginForm.get('userName')?.errors?.['required']"class="position-span">{{userNameErrorMsg}}</span>
+                <div role="alert"
+                class="alert alert-light"
+                *ngIf="loginForm.controls['userName']?.status==='INVALID' && (loginForm.controls['userName']?.touched || loginForm.controls['userName']?.dirty)"
+              >
+              Atleast 3 characters required and no special character allowed.
+              </div>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password"  formControlName="passWord">
+                <span class="position-span" *ngIf="loginForm.get('passWord')?.errors?.['required']">{{pwErrorMsg}}</span>
+                <div role="alert"
+                class="alert alert-light"
+                *ngIf="loginForm.controls['passWord']?.status==='INVALID' && (loginForm.controls['passWord']?.touched || loginForm.controls['passWord']?.dirty)"
+              >
+                Password must contain more than 8 characters, 1 upper case letter,1
+                special character and a number.
+              </div>
+                
+                <button class="margin-top" type="submit" (click)="authService.SignIn(loginForm.get('userName')?.value, loginForm.get('passWord')?.value)" [ngClass]="{'disabled':loginForm.invalid}">Login</button>
+                
+              </form>
+              <p>Don't have an account? <a class="cursor-pointer"(click)="navigateToForm()" id="signup-link">Sign up</a></p>
+            </div>
+        
+            <div class="form-container" id="signup-form" *ngIf="isSignUp">
+              <h1>Sign Up</h1>
+              <form [formGroup]="signupForm">
+                <label for="new-username">Username</label>
+                <input type="text" id="new-username" name="new-username" formControlName="username">
+                <span *ngIf="signupForm.get('username')?.errors?.['required']"class="position-span">{{userNamefieldErrorMsg}}</span>
+                <div role="alert"
+                class="alert alert-light"
+                *ngIf="signupForm.controls['username']?.status==='INVALID' && (signupForm.controls['username']?.touched || signupForm.controls['username']?.dirty)"
+              >
+              Atleast 3 characters required and no special character allowed.
+              </div>
+                <label for="new-email">Email</label>
+                <input type="email" id="new-email" name="new-email" formControlName="emailId">
+                <span *ngIf="signupForm.get('emailId')?.errors?.['required']"class="position-span">{{emailErrorMsg}}</span>
+                <div role="alert"
+                class="alert alert-light"
+                *ngIf="signupForm.controls['emailId']?.status==='INVALID' && (signupForm.controls['emailId']?.touched || signupForm.controls['emailId']?.dirty)"
+              >
+              Please Enter a valid Email Id.
+              </div>
+                <label for="new-password">Password</label>
+                <input type="password" id="new-password" name="new-password" formControlName="password">
+                <span class="position-span" *ngIf="signupForm.get('password')?.errors?.['required']">{{pwfieldErrorMsg}}</span>
+                <div role="alert"
+                class="alert alert-light"
+                *ngIf="signupForm.controls['password']?.status==='INVALID' && (signupForm.controls['password']?.touched || signupForm.controls['password']?.dirty)"
+              >
+                Password must contain more than 8 characters, 1 upper case letter,1
+                special character and a number.
+              </div>
+
+                <button type="submit" (click)="authService.SignUp(signupForm.get('emailId')?.value, signupForm.get('password')?.value)">Sign Up</button>
+              </form>
+              <p>Already have an account? <a class="cursor-pointer"(click)="BackToLogin()" id="login-link">Login</a></p>
+            </div>
+          </div> 
+</ng-container>
+
+<ng-container *ngIf="showToaster">
+
+
+<div class="toast align-items-center text-bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="d-flex">
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+    <button type="button" (click)="oncloseToaster()" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+</div>
+
+</ng-container>
+  <!-- <app-register-form [isSignUp]="isSignUp"></app-register-form> -->
+ 
