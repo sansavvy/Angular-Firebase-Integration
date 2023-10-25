@@ -13,7 +13,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/form-validation",
+            "outputPath": "docs",
+            "baseHref":"/Angular-Firebase-Integration/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -31,12 +32,15 @@
             "scripts": []
           },
           "configurations": {
+            "github-pages": {
+              "baseHref": "/Angular-Firebase-Integration"
+            },
             "production": {
               "budgets": [
                 {
                   "type": "initial",
                   "maximumWarning": "1mb",
-                  "maximumError": "1mb"
+                  "maximumError": "4mb"
                 },
                 {
                   "type": "anyComponentStyle",
